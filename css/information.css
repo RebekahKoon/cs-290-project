@@ -1,0 +1,66 @@
+p {
+  font-size: 1em;
+}
+
+.row {
+  padding-left: 50px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-right {
+  padding: 10px;
+}
+
+/* Used for lists */
+.info-list {
+  list-style-type: circle;
+  margin-right: 50px;
+  width: 100%;
+}
+
+/* Source for centering images: https://www.w3schools.com/howto/howto_css_image_center.asp */
+img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: .5em;
+}
+
+/* Creating scrollbox source: https://www.quackit.com/html/codes/html_scroll_box.cfm */
+#info-scrollbox {
+  overflow: scroll;
+  height: 600px;
+  padding: 10px;
+}
+
+#info-scrollbox ul {
+  padding-left: 60px;
+  list-style-type: circle;
+}
+
+@media screen and (min-width: 940px) {
+
+  /* Source for making info box and floating images left and right:
+   * https://stackoverflow.com/questions/31860998/html-css-floating-image-right-of-text*/
+  .info-box {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  /* Makes image float left alongside text */
+  .info-box .img-left {
+    margin-right: 30px;
+    float: left;
+    width: 60%;
+  }
+
+  /* Makes image float right alongside text */
+  .info-box .img-right {
+    float: right;
+    width: 60%;
+  }
+}

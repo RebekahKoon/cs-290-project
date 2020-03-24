@@ -1,0 +1,44 @@
+p {
+  font-size: 1em;
+}
+
+h2 {
+  color: #435a88;
+  font-family: Laila;
+}
+
+.row {
+  padding: 10px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column-right {
+  padding-right: 10px;
+  text-align: center;
+}
+
+/* Source for centering image: https://www.w3schools.com/howto/howto_css_image_center.asp */
+img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: .5em;
+}
+
+button {
+  background-color: #e34f00;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #a71806;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #c62e1d;
+}

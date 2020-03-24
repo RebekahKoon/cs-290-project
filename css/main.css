@@ -1,0 +1,207 @@
+/* CSS carousel source:
+ * https://medium.com/@marcusmichaels/how-to-build-a-carousel-from-scratch-in-vanilla-js-9a096d3b98c9
+ *
+ * Navigation sources: https://www.w3schools.com/css/css_navbar.asp,
+ * https://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
+ *
+ * Source for keeping footer at the end of the page:
+ * https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551
+ *
+ * Source for responsive web design: Learning Web Design, 5th edition, by
+ * Jennifer Niederst Robbins
+ */
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+.main-container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+body {
+  font-family: Roboto;
+  max-width: 1100px;
+  margin: auto;
+  height: 100%;
+  /* Background source: https://projectinc.co.uk/articles/interlaced/ */
+  background-image: url("https://www.dropbox.com/s/d0v27zs2i8cidib/background.png?dl=1");
+  background-repeat: repeat;
+}
+
+h1 {
+  text-align: center;
+  font-family: Laila;
+  font-size: 2em;
+  margin: 0;
+  color: #556B2F;
+}
+
+h2 {
+  color: #435a88;
+  font-family: Laila;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #873e8f;
+}
+
+/* Color when hovering */
+a:hover {
+  color: #ca86ef;
+}
+
+footer {
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #e34f00;
+  border-left: 3px solid #a71806;
+  border-right: 3px solid #a71806;
+  border-top: 3px solid #a71806;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  color: #ffffff;
+  min-height: 20px;
+  font-size: .25em;
+}
+
+/* Used for navigation bar */
+nav ul {
+  display: center;
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #e34f00;
+  border-left: 3px solid #a71806;
+  border-right: 3px solid #a71806;
+  border-bottom: 3px solid #a71806;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+/* Used for navigation bar */
+nav li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: none;
+}
+
+/* Used for navigation bar */
+nav a {
+  text-align: center;
+  margin: 0;
+  padding-left: 10px;
+  display: block;
+  font-size: .5em;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: helvetica;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Hovering over navigation bar link */
+nav a:hover {
+  background-color: #c62e1d;
+  color: #ffffff;
+}
+
+.row {
+  border: 2px solid #556B2F;
+  border-radius: .5em;
+  padding: 5px;
+  display: center;
+  background-color: #e8eae5;
+  margin-bottom: 50px;
+}
+
+.footer-col {
+  float: left;
+  width: 30%;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #efd156;
+}
+
+.footer-col a:hover {
+  color: #ffeda8;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    font-size: 1em;
+  }
+
+  nav a {
+    width: 100px;
+    font-size: .75em;
+  }
+
+  .column-left {
+    float: left;
+    width: 70%;
+  }
+
+  .column-right {
+    float: left;
+    width: 28%;
+    margin-left: 5px;
+    padding: 0;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  nav a {
+    width: 200px;
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav a {
+    width: 260px;
+  }
+}

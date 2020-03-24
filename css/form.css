@@ -1,0 +1,184 @@
+/* Form source: https://www.w3schools.com/howto/howto_css_responsive_form.asp
+ * Source for making the calendar dropdown: https://stackoverflow.com/questions/15530850/method-to-show-native-datepicker-in-chrome/45461709#45461709 */
+/* Holds the form */
+.appointment {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* Row in the form */
+.row {
+  border: none;
+  border-radius: .5em;
+  padding: 5px;
+  display: center;
+  background-color: #e8eae5;
+  margin: 0;
+}
+
+/* For text that appears after the form is sent */
+#submitMessage {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+form {
+  background-color: #e8eae5;
+}
+
+/* Input type for each form item */
+input[type=text], input[type=email], input[type=date], textarea {
+  width: 95%;
+  float: right;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #ccc;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  font-size: 1em;
+  font-family: Roboto;
+  position: relative;
+}
+
+/* Creating an arrow for the calendar */
+input[type="date"]:after {
+  content: "\25BC";
+  padding: 0 5px;
+}
+
+/* Changes arrow color when hovering */
+input[type="date"]:hover:after {
+  color: #e34f00;
+}
+
+/* Making the calendar appear when date input box is clicked */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* Adjusting increase/decrease button */
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+/* Adjusting clear button */
+input[type="date"]::-webkit-clear-button {
+  z-index: 1;
+}
+
+/* Select form option */
+select {
+  width: 95%;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  resize: vertical;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+label {
+  padding: 5px;
+  display: inline-block;
+}
+
+/* Submit button */
+input[type=submit] {
+  background-color: #e34f00;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #a71806;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 1em;
+}
+
+input[type=submit]:hover {
+  background-color: #c62e1d;
+}
+
+/* Column for form labels */
+.col-label {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+}
+
+/* Column for the user's responses */
+.col-response {
+  float: left;
+  width: 75%;
+  margin-top: 4px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Source: https://www.w3schools.com/howto/howto_css_image_center.asp */
+img {
+  width: 29%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: .5em;
+}
+
+@media screen and (min-width: 600px) {
+  input[type=text], input[type=email], input[type=tel] {
+    font-size: 1.5em;
+  }
+
+  .appointment {
+    float: left;
+  }
+
+  img {
+    width: 28%;
+    float: right;
+    margin-left: 5px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .appointment {
+    float: left;
+  }
+
+  img {
+    width: 29%;
+    float: right;
+    margin-left: 10px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rub-a-Dub Dog Grooming</title>
+    <style>
+      @import url(css/main.css);
+      @import url(css/carousel.css);
+      @import url('https://fonts.googleapis.com/css?family=Laila:600|Roboto&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <!-- Source for navigation: https://www.geeksforgeeks.org/html-nav-tag/ -->
+    <div class="main-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="information.html">Grooming Information</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <h1>Rub-a-Dub Dog Grooming</h1>
+
+      <!-- Source for carousel:
+  https://medium.com/@marcusmichaels/how-to-build-a-carousel-from-scratch-in-vanilla-js-9a096d3b98c9 -->
+      <div class="row">
+        <div class="carousel-column">
+          <div class="carousel">
+            <div class="carousel-slides">
+              <img
+                class="carousel-photo initial"
+                src="https://www.dropbox.com/s/fys05kclgnzpavp/lab-bath.jpg?raw=1"
+                alt="Lab taking a bath"
+              />
+              <img
+                class="carousel-photo"
+                src="https://www.dropbox.com/s/k4yfyq9faq4xvj9/terrier-bath.jpg?raw=1"
+                alt="Terrier taking a bath"
+              />
+              <img
+                class=" carousel-photo"
+                src="https://www.dropbox.com/s/b1qqshcow8s1uz3/grooming-spaniel.jpg?raw=1"
+                alt="Cocker spaniel being groomed"
+              />
+              <img
+                class="carousel-photo"
+                src="https://www.dropbox.com/s/e5mrfbxe0hnzs4z/grooming-terrier.png?raw=1"
+                alt="Terrier being groomed"
+              />
+              <img
+                class="carousel-photo"
+                src="https://www.dropbox.com/s/3ndzztnynmbtfg1/grooming-yorkie.jpg?raw=1"
+                alt="Yorkie being groomed"
+              />
+              <img
+                class="carousel-photo"
+                src="https://www.dropbox.com/s/ugnw4f6mo7ie5eh/grooming-poodle.jpg?raw=1"
+                alt="Poodle being groomed"
+              />
+
+              <div id="source-text"></div>
+
+              <div class="carousel-next-button"></div>
+              <div class="carousel-prev-button"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column-right">
+          <h2 style="text-align: center;">Quality Pet Grooming</h2>
+          <p>
+            At Rub-a-Dub Dog Grooming, our mission is to make your pet feel relaxed and stress-free.
+            Our expert team has several years of experience providing quality grooming services for
+            your pet. Your pet will feel pampered and loved in our care.
+          </p>
+          <p>
+            Your pet's health is essential to us. We use top-quality products in order to keep your
+            pet's skin healthy and coat shiny. If you have any questions, please feel free to
+            contact us using the email address at the bottom of the page.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-col">
+          Rebekah Koon<br />
+          koonr@oregonstate.edu
+        </div>
+        <div class="footer-col">
+          Rub-a-Dub Dog Grooming<br />
+          <a href="https://projectinc.co.uk/articles/interlaced/" target="_blank">
+            Background source: projectinc.co.uk
+          </a>
+        </div>
+        <div class="footer-col">
+          CS 290 Project<br />
+          Fall 2019
+        </div>
+      </footer>
+    </div>
+
+    <script src="javascript/carousel.js"></script>
+  </body>
+</html>

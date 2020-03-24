@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Your Appointment</title>
+    <style>
+      @import url(css/main.css);
+      @import url(css/form.css);
+      @import url('https://fonts.googleapis.com/css?family=Laila:600|Roboto&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="information.html">Grooming Information</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <h1>Book an Appointment</h1>
+
+      <img src="https://www.dropbox.com/s/iayf2uj29tinbsm/ridley.jpeg?raw=1" alt="" />
+
+      <div class="appointment">
+        <form method="post">
+          <!-- Form source: https://www.w3schools.com/html/html_form_input_types.asp -->
+          <fieldset>
+            <div class="row">
+              <div class="col-label">
+                <label for="name">Your name: </label>
+              </div>
+              <div class="col-response">
+                <input type="text" name="name" id="name" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                <label for="email">Email: </label>
+              </div>
+              <div class="col-response">
+                <input type="email" name="email" id="email" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                <label for="petName">Your pet's name: </label>
+              </div>
+              <div class="col-response">
+                <input type="text" name="petName" id="petName" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                <label for="petName">Breed: </label>
+              </div>
+              <div class="col-response">
+                <input type="text" name="petBreed" id="petBreed" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                <label for="service">Service: </label>
+              </div>
+              <div class="col-response">
+                <select id="grooming" name="grooming">
+                  <option value="bath" name="bath">Basic bath</option>
+                  <option value="grooming" name="style">Bath and grooming</option>
+                  <option value="style" name="style">Bath, grooming, and style cut</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                <label for="number">What day? </label>
+              </div>
+              <div class="col-response">
+                <input type="date" name="date" id="date" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-label">
+                Anything we need to know about your pet:
+              </div>
+              <div class="col-response">
+                <textarea name="petInfo" id="petInfo" rows="6" cols="80"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <input type="submit" value="Submit" name="submitForm" id="submitForm" />
+              <div id="submitMessage"></div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <footer>
+        <div class="footer-col">
+          Rebekah Koon<br />
+          koonr@oregonstate.edu
+        </div>
+        <div class="footer-col">
+          Rub-a-Dub Dog Grooming<br />
+          <a href="https://projectinc.co.uk/articles/interlaced/" target="_blank">
+            Background source: projectinc.co.uk
+          </a>
+        </div>
+        <div class="footer-col">
+          CS 290 Project<br />
+          Fall 2019
+        </div>
+      </footer>
+    </div>
+
+    <script src="javascript/form.js"></script>
+  </body>
+</html>

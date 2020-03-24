@@ -1,0 +1,133 @@
+/* CSS carousel source:
+ * https://medium.com/@marcusmichaels/how-to-build-a-carousel-from-scratch-in-vanilla-js-9a096d3b98c9
+ * Source for responsive web design: Learning Web Design, 5th edition, by
+ * Jennifer Niederst Robbins
+ */
+.carousel {
+  overflow: hidden;
+  width: 97%;
+}
+
+.carousel * {
+  box-sizing: border-box;
+}
+
+/* Used for each carousel photo */
+.carousel-photo {
+  opacity: 0;
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  height: 190px;
+  padding: 1px 4px;
+  z-index: 100;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+/* Carousel buttons */
+.carousel-next-button,
+.carousel-prev-button {
+  position: absolute;
+  top: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  border: 1px solid black;
+}
+
+.carousel-slides {
+  transform-style: preserve-3d;
+}
+
+/* Current photo being displayed */
+.carousel-photo.initial,
+.carousel-photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel-photo.prev,
+.carousel-photo.next {
+  z-index: 800;
+}
+
+.carousel-photo.prev {
+  transform: translateX(-100%);
+}
+
+.carousel-photo.next {
+  transform: translateX(100%);
+}
+
+.carousel-next-button {
+  right: 0;
+}
+
+.carousel-prev-button {
+  left: 0;
+}
+
+.carousel-next-button::after,
+.carousel-prev-button::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel-next-button::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#source-text {
+  text-align: center;
+}
+
+@media screen and (min-width: 300px) {
+  .carousel-photo {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-photo {
+    height: 350px;
+  }
+
+  .carousel-next-button,
+  .carousel-prev-button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .carousel-column {
+    float: left;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 940px) {
+    .carousel-photo {
+      height: 475px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .carousel-photo {
+      height: 500px;
+    }
+  }
